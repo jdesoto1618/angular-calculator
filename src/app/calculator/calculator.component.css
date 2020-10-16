@@ -1,0 +1,109 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 85%;
+  box-sizing: border-box;
+}
+
+.screen-container {
+  width: 85%;
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 8rem;
+  font-size: 3.5rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #252525;
+  color: #fff;
+  text-align: right;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #c4c4c4;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #333;
+  background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.04));
+  box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.05), inset 0 -0.1rem 0 0 rgba(255, 255, 255, 0.15), 0 0.1rem 0 0 rgba(255, 255, 255, 0.15);
+  text-shadow: 0 0.1rem rgba(255, 255, 255 0.04);
+  transition: background-color 0.3s linear;
+}
+
+button:active,
+button:hover,
+button:focus {
+  background-color: #eaeaea;
+}
+
+.operator {
+  color: #337cac;
+}
+
+.clear-all {
+  background-color: #f0595f;
+  border-color: #b0353a;
+  color: #fff;
+  transition: background-color 0.3s linear;
+}
+
+.clear-all:active,
+.clear-all:hover,
+.clear-all:focus {
+  background-color: #f17377;
+}
+
+.equal-sign {
+  background-color: #2e86c0;  
+  border-color: #337cac;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+  transition: background-color 0.3s linear;
+}
+
+.equal-sign:active,
+.equal-sign:hover,
+.equal-sign:focus {
+  background-color: #4e9ed4;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .calculator {
+    max-width: 40rem;
+  }
+
+  .screen-container {
+    max-width: 40rem;
+  }
+
+  .calculator-screen {
+    font-size: 5rem;
+  }
+}
